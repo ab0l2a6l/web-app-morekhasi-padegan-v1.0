@@ -18,7 +18,7 @@ public class SarbazControler {
         return sarbazService.update(sarbaz, tedadMorekhasiDarkhasti);
     }
 
-    public boolean delete (Sarbaz sarbaz){
+    public int delete (Sarbaz sarbaz){
         return sarbazService.delete(sarbaz);
     }
 

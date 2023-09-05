@@ -14,8 +14,13 @@
   sarbaz.setLast_name(request.getParameter("del-last-name"));
   sarbaz.setTedadMorekhasi(Integer.parseInt(request.getParameter("del-tedad-morekhasi")));
   SarbazControler sarbazControler = new SarbazControler();
-  if(sarbazControler.delete(sarbaz))
+  int result = sarbazControler.delete(sarbaz);
+
+  if(result == 1)
     response.sendRedirect("three.jsp");
-  else
+  else if (result == -1)
     response.sendRedirect("exeption.jsp");
+  else {
+    response.sendRedirect("exep-delete.jsp");
+  }
 %>

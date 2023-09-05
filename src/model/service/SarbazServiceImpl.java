@@ -43,13 +43,13 @@ public class SarbazServiceImpl implements SarbazService{
     }
 
     @Override
-    public boolean delete(Sarbaz sarbaz) {
+    public int delete(Sarbaz sarbaz) {
         try {
             sarbazDB = new SarbazDBImpl();
-            sarbazDB.delete(sarbaz);
-            return true;
+           return sarbazDB.delete(sarbaz);
+
         }catch (Exception e){
-            return false;
+            return -1;
         }
     }
 

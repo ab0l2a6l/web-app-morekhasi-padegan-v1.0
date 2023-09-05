@@ -7,7 +7,7 @@ import java.util.List;
 public interface SarbazService {
     boolean save(Sarbaz sarbaz);
     int update(Sarbaz sarbaz , int tedadMorekhasiDarkhasti);
-    boolean delete(Sarbaz sarbaz);
+    int delete(Sarbaz sarbaz);
     List<Sarbaz> showAll();
     Sarbaz estelam(long id);
 }

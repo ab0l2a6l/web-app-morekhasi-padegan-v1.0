@@ -58,17 +58,17 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
     }
 
     @Override
-    public boolean delete(Sarbaz sarbaz) {
+    public int delete(Sarbaz sarbaz) {
         try {
             preparedStatement = connection.prepareStatement("delete from sarbaz where id = ? and " +
                     "first_name = ? and last_name = ?");
             preparedStatement.setString(1, String.valueOf(sarbaz.getId()));
             preparedStatement.setString(2, sarbaz.getFirstName());
             preparedStatement.setString(3, sarbaz.getLast_name());
-            preparedStatement.executeUpdate();
-            return true;
+            return preparedStatement.executeUpdate();
+
         } catch (Exception e) {
-            return false;
+            return -1;
         }
     }
 
