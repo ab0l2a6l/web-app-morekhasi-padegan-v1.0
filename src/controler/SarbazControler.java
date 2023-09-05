@@ -14,7 +14,7 @@ public class SarbazControler {
         return sarbazService.save(sarbaz);
     }
 
-    public boolean update (Sarbaz sarbaz, int tedadMorekhasiDarkhasti) {
+    public int update (Sarbaz sarbaz, int tedadMorekhasiDarkhasti) {
         return sarbazService.update(sarbaz, tedadMorekhasiDarkhasti);
     }
 

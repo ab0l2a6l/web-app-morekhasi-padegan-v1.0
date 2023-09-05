@@ -9,37 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5afd1bc9-d5d6-466a-970c-5622531ec19e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/morekhasi_sarbaz_v1_0_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_33.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/morekhasi-sarbaz-v1.0.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controler/SarbazControler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/entity/Sarbaz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/repository/SarbazDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/repository/SarbazDBImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/service/SarbazService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/service/SarbazServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-j-8.0.33.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/del-validation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/est-validation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/save-validation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/up-validation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/estelam.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/exeption.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/showAll.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/three.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/two-delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/two-save.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/two-update.jsp" afterDir="false" />
+    <list default="true" id="5afd1bc9-d5d6-466a-970c-5622531ec19e" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/web/exep-update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controler/SarbazControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/SarbazControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/service/SarbazService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/service/SarbazService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/service/SarbazServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/service/SarbazServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/two-update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/two-update.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,18 +52,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/projects/morekhasi-sarbaz-v1.0/web/WEB-INF/lib",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/projects/morekhasi-sarbaz-v1.0/web/WEB-INF/lib&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\projects\morekhasi-sarbaz-v1.0\web\WEB-INF\lib" />
@@ -192,8 +168,28 @@
       <option name="presentableId" value="Default" />
       <updated>1693852546720</updated>
       <workItem from="1693852548190" duration="3111000" />
-      <workItem from="1693898884250" duration="7697000" />
+      <workItem from="1693898884250" duration="9098000" />
+      <workItem from="1693918783942" duration="1142000" />
     </task>
+    <task id="LOCAL-00001" summary=".">
+      <created>1693911393263</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1693911393263</updated>
+    </task>
+    <task id="LOCAL-00002" summary=".">
+      <created>1693911415066</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693911415066</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>

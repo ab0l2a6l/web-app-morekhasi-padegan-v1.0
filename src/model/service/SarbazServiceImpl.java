@@ -28,16 +28,17 @@ public class SarbazServiceImpl implements SarbazService{
     }
 
     @Override
-    public boolean update(Sarbaz sarbaz ,int tedadMorekhasiDarkhasti) {
+    public int update(Sarbaz sarbaz ,int tedadMorekhasiDarkhasti) {
         try {
             sarbazDB = new SarbazDBImpl();
             if (sarbazDB.ayaMorekhasiDari(sarbaz.getId() , tedadMorekhasiDarkhasti)) {
                 sarbaz.setTedadMorekhasi(sarbaz.getTedadMorekhasi() - tedadMorekhasiDarkhasti);
                 sarbazDB.update(sarbaz);
+                return 1;
             }
-            return true;
+            return -1;
         }catch (Exception e) {
-            return false;
+            return 0;
         }
     }
 
