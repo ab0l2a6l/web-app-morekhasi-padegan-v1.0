@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="morekhasi-sarbaz-v1.0:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/morekhasi_sarbaz_v1_0_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="morekhasi-sarbaz-v1.0/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="morekhasi-sarbaz-v1.0" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
