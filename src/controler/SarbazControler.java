@@ -10,7 +10,7 @@ import java.util.List;
 public class SarbazControler {
     private SarbazService sarbazService = SarbazServiceImpl.getInstance();
 
-    public boolean save (Sarbaz sarbaz){
+    public int save (Sarbaz sarbaz){
         return sarbazService.save(sarbaz);
     }
 

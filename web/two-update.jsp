@@ -20,7 +20,7 @@
     int result = sarbazControler.update(sarbaz , tedad );
     if (result == 1)
         response.sendRedirect("three.jsp");
-    else if (result == 0)
+    else if (result == -1)
         response.sendRedirect("exeption.jsp");
     else {
         response.sendRedirect("exep-update.jsp");

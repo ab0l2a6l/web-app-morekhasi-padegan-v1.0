@@ -16,13 +16,16 @@ public class SarbazServiceImpl implements SarbazService{
     private  SarbazDB sarbazDB;
 
     @Override
-    public boolean save(Sarbaz sarbaz) {
+    public int save(Sarbaz sarbaz) {
         try {
             sarbazDB = new SarbazDBImpl();
-            sarbazDB.save(sarbaz);
-            return true;
+            boolean temp = sarbazDB.save(sarbaz);
+            if (temp == true)
+                return 1;
+            else
+                return 0;
         }catch (Exception e) {
-            return false;
+            return -1;
         }
 
     }
@@ -36,13 +39,13 @@ public class SarbazServiceImpl implements SarbazService{
                 sarbazDB.update(sarbaz);
                 return 1;
             }
-            return -1;
-        }catch (Exception e) {
             return 0;
+        }catch (Exception e) {
+            return -1;
         }
     }
 
-    @Override
+@Override
     public int delete(Sarbaz sarbaz) {
         try {
             sarbazDB = new SarbazDBImpl();
