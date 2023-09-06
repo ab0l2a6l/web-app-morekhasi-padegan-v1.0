@@ -20,7 +20,7 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
                     , "root", "Am311865186");
 
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());
         }
     }
 
@@ -36,6 +36,7 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
             preparedStatement.executeUpdate();
             return true;
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return false;
         }
     }
@@ -52,7 +53,7 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
             preparedStatement.executeUpdate();
             return true;
         } catch (Exception e) {
-
+            System.out.println(e.getMessage());
             return false;
         }
     }
@@ -68,6 +69,7 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
             return preparedStatement.executeUpdate();
 
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return -1;
         }
     }
@@ -88,6 +90,7 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
             }
             return sarbazs;
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return null;
         }
     }
@@ -107,6 +110,7 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
             }
             return sarbaz;
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return null;
         }
     }
@@ -123,6 +127,7 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
                     return true;
             }
         }catch (Exception e) {
+            System.out.println(e.getMessage());
             return false;
         }
         return false;
