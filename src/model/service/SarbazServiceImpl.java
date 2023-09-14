@@ -1,10 +1,10 @@
 package model.service;
 
+import model.command.WrapperClass;
 import model.entity.Sarbaz;
 import model.repository.SarbazDB;
 import model.repository.SarbazDBImpl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class SarbazServiceImpl implements SarbazService{
@@ -16,43 +16,40 @@ public class SarbazServiceImpl implements SarbazService{
     private  SarbazDB sarbazDB;
 
     @Override
-    public int save(Sarbaz sarbaz) {
+    public void save(Sarbaz sarbaz) {
         try {
             sarbazDB = new SarbazDBImpl();
-            boolean temp = sarbazDB.save(sarbaz);
-            if (temp == true)
-                return 1;
-            else
-                return 0;
+            sarbazDB.save(sarbaz);
+
         }catch (Exception e) {
-            return -1;
+            WrapperClass.getError(e);
         }
 
     }
 
     @Override
-    public int update(Sarbaz sarbaz ,int tedadMorekhasiDarkhasti) {
+    public void update(Sarbaz sarbaz ,int tedadMorekhasiDarkhasti) {
         try {
             sarbazDB = new SarbazDBImpl();
             if (sarbazDB.ayaMorekhasiDari(sarbaz.getId() , tedadMorekhasiDarkhasti)) {
                 sarbaz.setTedadMorekhasi(sarbaz.getTedadMorekhasi() - tedadMorekhasiDarkhasti);
                 sarbazDB.update(sarbaz);
-                return 1;
+
             }
-            return 0;
+
         }catch (Exception e) {
-            return -1;
+            WrapperClass.getError(e);
         }
     }
 
 @Override
-    public int delete(Sarbaz sarbaz) {
+    public void delete(Sarbaz sarbaz) {
         try {
             sarbazDB = new SarbazDBImpl();
-           return sarbazDB.delete(sarbaz);
+            sarbazDB.delete(sarbaz);
 
         }catch (Exception e){
-            return -1;
+            WrapperClass.getError(e);
         }
     }
 
@@ -62,9 +59,9 @@ public class SarbazServiceImpl implements SarbazService{
             sarbazDB = new SarbazDBImpl();
             return sarbazDB.showAll();
         }catch (Exception e){
-            return null;
+            WrapperClass.getError(e);
         }
-
+        return null;
     }
 
     @Override
@@ -73,7 +70,8 @@ public class SarbazServiceImpl implements SarbazService{
             sarbazDB = new SarbazDBImpl();
             return sarbazDB.estelam(id);
         }catch (Exception e){
-            return null;
+            WrapperClass.getError(e);
         }
+        return null;
     }
 }

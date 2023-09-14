@@ -8,19 +8,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-  Sarbaz sarbaz = new Sarbaz();
-  sarbaz.setId(Long.parseLong(request.getParameter("del-id")));
-  sarbaz.setFirstName(request.getParameter("del-first-name"));
-  sarbaz.setLast_name(request.getParameter("del-last-name"));
-  sarbaz.setTedadMorekhasi(Integer.parseInt(request.getParameter("del-tedad-morekhasi")));
-  SarbazControler sarbazControler = new SarbazControler();
-  int result = sarbazControler.delete(sarbaz);
+    Sarbaz sarbaz = new Sarbaz();
+    sarbaz.setId(Long.parseLong(request.getParameter("del-id")));
+    sarbaz.setFirstName(request.getParameter("del-first-name"));
+    sarbaz.setLast_name(request.getParameter("del-last-name"));
+    sarbaz.setTedadMorekhasi(Integer.parseInt(request.getParameter("del-tedad-morekhasi")));
+    SarbazControler sarbazControler = new SarbazControler();
+    sarbazControler.delete(sarbaz);
 
-  if(result == 1)
-    response.sendRedirect("three.jsp");
-  else if (result == -1)
-    response.sendRedirect("exeption.jsp");
-  else {
-    response.sendRedirect("exep-delete.jsp");
-  }
 %>

@@ -10,16 +10,16 @@ import java.util.List;
 public class SarbazControler {
     private SarbazService sarbazService = SarbazServiceImpl.getInstance();
 
-    public int save (Sarbaz sarbaz){
-        return sarbazService.save(sarbaz);
+    public void save (Sarbaz sarbaz){
+          sarbazService.save(sarbaz);
     }
 
-    public int update (Sarbaz sarbaz, int tedadMorekhasiDarkhasti) {
-        return sarbazService.update(sarbaz, tedadMorekhasiDarkhasti);
+    public void update (Sarbaz sarbaz, int tedadMorekhasiDarkhasti) {
+         sarbazService.update(sarbaz, tedadMorekhasiDarkhasti);
     }
 
-    public int delete (Sarbaz sarbaz){
-        return sarbazService.delete(sarbaz);
+    public void delete (Sarbaz sarbaz){
+          sarbazService.delete(sarbaz);
     }
 
     public List<Sarbaz> showAll(){

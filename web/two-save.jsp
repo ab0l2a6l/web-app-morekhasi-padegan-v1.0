@@ -8,18 +8,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-  Sarbaz sarbaz = new Sarbaz();
-  SarbazControler sarbazControler = new SarbazControler();
-  sarbaz.setId(Long.parseLong(request.getParameter("save-id")));
-  sarbaz.setFirstName(request.getParameter("save-first-name"));
-  sarbaz.setLast_name(request.getParameter("save-last-name"));
-  sarbaz.setTedadMorekhasi(Integer.parseInt(request.getParameter("save-tedad-morekhasi")));
-  int result = sarbazControler.save(sarbaz);
+    Sarbaz sarbaz = new Sarbaz();
+    SarbazControler sarbazControler = new SarbazControler();
+    sarbaz.setId(Long.parseLong(request.getParameter("save-id")));
+    sarbaz.setFirstName(request.getParameter("save-first-name"));
+    sarbaz.setLast_name(request.getParameter("save-last-name"));
+    sarbaz.setTedadMorekhasi(Integer.parseInt(request.getParameter("save-tedad-morekhasi")));
+    sarbazControler.save(sarbaz);
 
-  if(result == 1)
-    response.sendRedirect("three.jsp");
-  else if (result == -1)
-    response.sendRedirect("exeption.jsp");
-  else
-    response.sendRedirect("exep-save.jsp");
 %>

@@ -17,12 +17,6 @@
     sarbaz.setFirstName(request.getParameter("up-first-name"));
     sarbaz.setLast_name(request.getParameter("up-last-name"));
     sarbaz.setTedadMorekhasi(Integer.parseInt(request.getParameter("up-tedad-morekhasi")));
-    int result = sarbazControler.update(sarbaz , tedad );
-    if (result == 1)
-        response.sendRedirect("three.jsp");
-    else if (result == -1)
-        response.sendRedirect("exeption.jsp");
-    else {
-        response.sendRedirect("exep-update.jsp");
-    }
+    sarbazControler.update(sarbaz, tedad);
+
 %>

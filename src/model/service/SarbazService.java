@@ -5,9 +5,9 @@ import model.entity.Sarbaz;
 import java.util.List;
 
 public interface SarbazService {
-    int save(Sarbaz sarbaz);
-    int update(Sarbaz sarbaz , int tedadMorekhasiDarkhasti);
-    int delete(Sarbaz sarbaz);
+    void save(Sarbaz sarbaz);
+    void update(Sarbaz sarbaz , int tedadMorekhasiDarkhasti);
+    void delete(Sarbaz sarbaz);
     List<Sarbaz> showAll();
     Sarbaz estelam(long id);
 }

@@ -1,5 +1,6 @@
 package model.repository;
 
+import model.command.WrapperClass;
 import model.entity.Sarbaz;
 
 import java.sql.Connection;
@@ -25,7 +26,7 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
     }
 
     @Override
-    public boolean save(Sarbaz sarbaz) {
+    public void save(Sarbaz sarbaz) {
         try {
             preparedStatement = connection.prepareStatement("insert into sarbaz (first_name , last_name ," +
                     "tedad_morekhasi , id)values (?,?,?,?)");
@@ -34,15 +35,14 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
             preparedStatement.setString(3, String.valueOf(sarbaz.getTedadMorekhasi()));
             preparedStatement.setString(4, String.valueOf(sarbaz.getId()));
             preparedStatement.executeUpdate();
-            return true;
+
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return false;
+            WrapperClass.getError(e);
         }
     }
 
     @Override
-    public boolean update(Sarbaz sarbaz) {
+    public void update(Sarbaz sarbaz) {
         try {
             preparedStatement = connection.prepareStatement("update sarbaz set tedad_morekhasi = ? where id = ?" +
                     " and first_name = ? and last_name = ?");
@@ -51,26 +51,24 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
             preparedStatement.setString(3, sarbaz.getFirstName());
             preparedStatement.setString(4, sarbaz.getLast_name());
             preparedStatement.executeUpdate();
-            return true;
+
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return false;
+            WrapperClass.getError(e);
         }
     }
 
     @Override
-    public int delete(Sarbaz sarbaz) {
+    public void delete(Sarbaz sarbaz) {
         try {
             preparedStatement = connection.prepareStatement("delete from sarbaz where id = ? and " +
                     "first_name = ? and last_name = ?");
             preparedStatement.setString(1, String.valueOf(sarbaz.getId()));
             preparedStatement.setString(2, sarbaz.getFirstName());
             preparedStatement.setString(3, sarbaz.getLast_name());
-            return preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return -1;
+            WrapperClass.getError(e);
         }
     }
 
@@ -90,9 +88,9 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
             }
             return sarbazs;
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return null;
+            WrapperClass.getError(e);
         }
+        return null;
     }
 
     @Override
@@ -102,7 +100,7 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
             preparedStatement = connection.prepareStatement("select * from sarbaz where id = ?");
             preparedStatement.setString(1, String.valueOf(id));
             ResultSet set = preparedStatement.executeQuery();
-            if (set.next()){
+            if (set.next()) {
                 sarbaz.setFirstName(set.getString("first_name"));
                 sarbaz.setLast_name(set.getString("last_name"));
                 sarbaz.setId(set.getLong("id"));
@@ -110,27 +108,26 @@ public class SarbazDBImpl implements AutoCloseable, SarbazDB {
             }
             return sarbaz;
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return null;
+            WrapperClass.getError(e);
         }
+        return null;
     }
 
     @Override
-    public boolean ayaMorekhasiDari(long id , int tedad ) {
+    public boolean ayaMorekhasiDari(long id, int tedad) {
         try {
             preparedStatement = connection.prepareStatement("select  tedad_morekhasi from sarbaz where id = ?");
             preparedStatement.setString(1, String.valueOf(id));
             ResultSet set = preparedStatement.executeQuery();
-            if (set.next())
-            {
-                if (set.getInt("tedad_morekhasi")>= tedad)
+            if (set.next()) {
+                if (set.getInt("tedad_morekhasi") >= tedad)
                     return true;
             }
-        }catch (Exception e) {
-            System.out.println(e.getMessage());
-            return false;
+        } catch (Exception e) {
+            WrapperClass.getError(e);
         }
         return false;
+
     }
 
     @Override

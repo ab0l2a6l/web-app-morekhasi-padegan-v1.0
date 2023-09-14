@@ -1,16 +1,16 @@
 <%--
   Created by IntelliJ IDEA.
   User: abolfazl.m
-  Date: 9/5/2023
-  Time: 11:52 AM
+  Date: 9/14/2023
+  Time: 9:30 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>error</title>
+    <title>exeption</title>
 </head>
 <body>
-    ye ja eshtebah kardi bargard b home page <a href="index.jsp"> ba click ro inja</a>
+    error
 </body>
 </html>
